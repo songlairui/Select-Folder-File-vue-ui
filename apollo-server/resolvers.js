@@ -6,8 +6,7 @@ const channels = require('./channels')
 // Connectors
 const cwd = require('./connectors/cwd')
 const files = require('./connectors/files')
-// Utils
-const stats = require('./util/stats')
+
 // Start ipc server
 require('./util/ipc')
 
