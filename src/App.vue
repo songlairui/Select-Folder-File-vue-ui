@@ -9,6 +9,11 @@
 </template>
 
 <style lang="stylus">
+@import "~@vue/ui/dist/vue-ui.css"
+@import "~@/style/main"
+</style>
+
+<style lang="stylus">
 #app
   font-family 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased
