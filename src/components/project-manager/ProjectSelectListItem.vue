@@ -19,6 +19,7 @@
             <span>{{ project.name }}</span>
 
             <ProjectTasksDropdown
+              v-if="project.tasks"
               class="bullet-menu"
               :tasks="project.tasks"
             />
