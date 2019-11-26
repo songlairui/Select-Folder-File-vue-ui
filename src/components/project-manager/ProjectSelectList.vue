@@ -3,7 +3,8 @@
     <ApolloQuery
       :query="require('@/graphql/project/projects.gql')"
     >
-      <template slot-scope="{ result: { data, loading } }">
+      <template slot-scope="{ result: { data, loading }, query }">
+        <VueButton ref='refetch' @click="() => query.refetch()">Refetch</VueButton>
         <template v-if="data">
           <div v-if="data.projects.length">
             <div class="toolbar">

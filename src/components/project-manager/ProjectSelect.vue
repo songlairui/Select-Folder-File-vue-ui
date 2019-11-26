@@ -12,7 +12,7 @@
         icon="storage"
         class="select"
       >
-        <ProjectSelectList />
+        <ProjectSelectList ref="list" />
       </VueTab>
 
       <VueTab
@@ -123,18 +123,21 @@ export default {
       this.busy = true;
       await this.$nextTick();
       try {
-        console.info("PROJECT_IMPORT", PROJECT_IMPORT, force);
-        // await this.$apollo.mutate({
-        //   mutation: PROJECT_IMPORT,
-        //   variables: {
-        //     input: {
-        //       path: this.folderCurrent.path,
-        //       force
-        //     }
-        //   }
-        // })
+        await this.$apollo.mutate({
+          mutation: PROJECT_IMPORT,
+          variables: {
+            input: {
+              path: this.folderCurrent.path,
+              force
+            }
+          }
+        });
 
-        this.$router.push({ name: "project-home" });
+        this.busy = false;
+        this.tab = "existing";
+        // this.$router.push({ name: "project-home" });
+        console.info("this.$apollo.queries", this.$refs.list);
+        this.$refs.list.$refs.refetch.$el.click();
       } catch (e) {
         if (
           e.graphQLErrors &&
