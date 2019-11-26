@@ -4,10 +4,14 @@ const path = require("path");
 module.exports = {
   pluginOptions: {
     i18n: {
-      locale: "zh",
-      fallbackLocale: "en",
-      localeDir: "locales",
+      locale: 'zh',
+      fallbackLocale: 'en',
+      localeDir: 'locales',
       enableInSFC: false
+    },
+    apollo: {
+      enableMocks: false,
+      enableEngine: false
     }
   },
   configureWebpack: {

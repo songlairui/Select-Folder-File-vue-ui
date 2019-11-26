@@ -6,6 +6,10 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "apollo": "vue-cli-service apollo:dev --generate-schema",
+    "apollo:schema:generate": "vue-cli-service apollo:schema:generate",
+    "apollo:schema:publish": "vue-cli-service apollo:schema:publish",
+    "apollo:start": "vue-cli-service apollo:start",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
@@ -13,6 +17,7 @@
     "ansi_up": "^4.0.4",
     "core-js": "^3.3.2",
     "deepmerge": "^4.2.2",
+    "graphql-type-json": "^0.2.1",
     "portal-vue": "^2.1.6",
     "prismjs": "^1.17.1",
     "register-service-worker": "^1.6.2",
@@ -36,6 +41,7 @@
     "@vue/cli-service": "^4.0.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
+    "eslint-plugin-graphql": "^2.1.1",
     "eslint-plugin-vue": "^5.0.0",
     "graphql-tag": "^2.9.0",
     "stylus": "^0.54.7",
