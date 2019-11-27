@@ -1,7 +1,6 @@
 <template>
   <div class="about">
     <h1>About</h1>
-    <p>FolderExplorer:</p>
-    <FolderExplorer />
+    <p>学习代码</p>
   </div>
 </template>

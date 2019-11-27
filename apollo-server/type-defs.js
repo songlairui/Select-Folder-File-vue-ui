@@ -16,18 +16,6 @@ interface DescribedEntity {
   link: String
 }
 
-type Version {
-  current: String
-  latest: String
-  wanted: String
-  range: String
-  localPath: String
-}
-
-type GitHubStats {
-  stars: Int
-}
-
 input OpenInEditorInput {
   file: String!
   line: Int
