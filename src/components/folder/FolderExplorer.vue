@@ -204,7 +204,6 @@ import FOLDERS_FAVORITE from '@/graphql/folder/foldersFavorite.gql'
 import FOLDER_OPEN from '@/graphql/folder/folderOpen.gql'
 import FOLDER_OPEN_PARENT from '@/graphql/folder/folderOpenParent.gql'
 import FOLDER_SET_FAVORITE from '@/graphql/folder/folderSetFavorite.gql'
-import PROJECT_CWD_RESET from '@/graphql/project/projectCwdReset.gql'
 import FOLDER_CREATE from '@/graphql/folder/folderCreate.gql'
 
 const SHOW_HIDDEN = 'vue-ui.show-hidden-folders'
@@ -350,9 +349,9 @@ export default {
     },
 
     resetProjectCwd () {
-      this.$apollo.mutate({
-        mutation: PROJECT_CWD_RESET
-      })
+      // this.$apollo.mutate({
+      //   mutation: PROJECT_CWD_RESET
+      // })
     },
 
     slicePath (path) {
