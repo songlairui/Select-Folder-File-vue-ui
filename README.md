@@ -1,24 +1,12 @@
 # lite-vueui
 
-## Project setup
-```
-yarn install
-```
+> 从 @vue/cli-ui 中抽取 FolderExplorer
 
-### Compiles and hot-reloads for development
+![Preview](./preview.jpg)
+
+### 运行
+
 ```
+yarn apollo
 yarn serve
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
