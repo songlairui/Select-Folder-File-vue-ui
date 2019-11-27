@@ -7,9 +7,6 @@ const channels = require('./channels')
 const cwd = require('./connectors/cwd')
 const files = require('./connectors/files')
 
-// Start ipc server
-require('./util/ipc')
-
 process.env.VUE_CLI_API_MODE = true
 
 const resolvers = [{

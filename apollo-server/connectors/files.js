@@ -3,7 +3,6 @@ const path = require('path')
 // Connectors
 const cwd = require('./cwd')
 const git = require('./git')
-const logs = require('./logs')
 
 async function openInEditor (input, context) {
   let query
@@ -18,10 +17,7 @@ async function openInEditor (input, context) {
       query += `:${input.column}`
     }
   }
-  logs.add({
-    message: `Opening file '${query}' in code editor...`,
-    type: 'info'
-  }, context)
+  console.info(`Opening file '${query}' in code editor...`)
   launch(query)
   return true
 }

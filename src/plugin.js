@@ -1,49 +1,18 @@
-import Vue from 'vue'
-import VueUi from '@vue/ui'
-import InstantSearch from 'vue-instantsearch'
-import VueMeta from 'vue-meta'
-import PortalVue from 'portal-vue'
-import VueObserveVisibility from 'vue-observe-visibility'
-import * as Filters from './filters'
-import Responsive from './util/responsive'
-import PluginAction from './util/plugin-action'
-import SetSize from './util/set-size'
+import Vue from "vue";
+import VueUi from "@vue/ui";
+import * as Filters from "./filters";
+import VueVirtualScroller from "vue-virtual-scroller";
+import "vue-virtual-scroller/dist/vue-virtual-scroller.css";
 import Focus from './util/focus'
-import Bus from './util/bus'
-import AnsiColors from './util/ansi-colors'
-import VueVirtualScroller from 'vue-virtual-scroller'
-import 'vue-virtual-scroller/dist/vue-virtual-scroller.css'
 
-Vue.use(InstantSearch)
-Vue.use(VueMeta)
-Vue.use(Responsive, {
-  computed: {
-    mobile () {
-      return this.width <= 768
-    },
-    tablet () {
-      return this.width <= 900
-    },
-    desktop () {
-      return !this.tablet
-    },
-    wide () {
-      return this.width >= 1300
-    }
-  }
-})
-Vue.use(VueUi)
-Vue.use(PortalVue)
-Vue.use(VueObserveVisibility)
-Vue.use(PluginAction)
-Vue.use(Bus)
-Vue.use(AnsiColors)
+
+Vue.use(VueUi);
 
 for (const key in Filters) {
-  Vue.filter(key, Filters[key])
+  Vue.filter(key, Filters[key]);
 }
 
-Vue.directive('set-size', SetSize)
 Vue.directive('focus', Focus)
 
-Vue.use(VueVirtualScroller)
+Vue.use(VueVirtualScroller);
+
